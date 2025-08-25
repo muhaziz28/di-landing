@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" fill="none">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#g2)"/>
+  <g opacity="0.2">
+    <rect x="160" y="120" width="240" height="180" rx="12" fill="#34d399"/>
+    <rect x="460" y="180" width="240" height="120" rx="12" fill="#60a5fa"/>
+    <rect x="760" y="140" width="360" height="160" rx="12" fill="#f472b6"/>
+  </g>
+  <rect x="80" y="520" width="1120" height="120" rx="16" fill="#1f2937"/>
+  <text x="100" y="590" font-family="system-ui, -apple-system, Segoe UI, Roboto" font-size="42" fill="#e5e7eb">Portal Riset dan Publikasi</text>
+</svg>
