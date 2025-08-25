@@ -18,18 +18,18 @@ type Project = {
 
 const projects: Project[] = [
   {
-    id: "p1",
-    title: "Sistem Informasi Akademik",
+    id: "gbl",
+    title: "GBL — Gerakan Baitul Lughah",
     description:
-      "Platform untuk manajemen akademik (jadwal, nilai, KRS) dengan arsitektur modern dan fokus pada aksesibilitas.",
+      "Website organisasi dengan fokus kegiatan pembelajaran bahasa Arab dan pengembangan komunitas.",
     image: "/project-1.svg",
     status: "Sedang Berjalan",
   },
   {
-    id: "p2",
-    title: "Portal Riset dan Publikasi",
+    id: "silat",
+    title: "Silat Kumango",
     description:
-      "Repositori publikasi ilmiah dengan fitur indexing, pencarian cepat, dan integrasi DOI.",
+      "Situs resmi Silat Kumango untuk dokumentasi, informasi event, dan profil perguruan.",
     image: "/project-2.svg",
     status: "Selesai",
   },
@@ -37,10 +37,10 @@ const projects: Project[] = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[--background] text-[--foreground]">
-      <header className="container mx-auto px-6 py-12 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+    <div className="min-h-screen bg-[--background] text-[--foreground] grid-noise">
+      <header className="container mx-auto px-6 py-12 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between sticky top-0 z-10">
         <div className="flex items-center gap-4">
-          <div className="size-14 rounded-full overflow-hidden ring-1 ring-black/10 dark:ring-white/10">
+          <div className="size-14 rounded-full overflow-hidden ring-1 ring-black/10 dark:ring-white/10 backdrop-blur">
             <Image src="/avatar.svg" alt="Dedi Irfan" width={56} height={56} />
           </div>
           <div>
@@ -52,10 +52,10 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 glass-surface rounded-xl border border-black/10 dark:border-white/10 px-2 py-1">
           <a
             href="#projects"
-            className="inline-flex items-center justify-center rounded-md border border-black/10 dark:border-white/20 bg-transparent hover:bg-black/5 dark:hover:bg-white/10 text-sm font-medium h-10 px-4 py-2"
+            className="inline-flex items-center justify-center rounded-md border border-black/10 dark:border-white/20 bg-white/30 hover:bg-white/40 dark:bg-white/5 dark:hover:bg-white/10 text-sm font-medium h-10 px-4 py-2 backdrop-blur-sm"
           >
             Lihat Proyek
           </a>
@@ -106,6 +106,28 @@ export default function Home() {
                     >
                       {project.status}
                     </Badge>
+                  </div>
+                  <div className="mt-4">
+                    {project.id === "gbl" && (
+                      <a
+                        href="https://gbl.dedyirfan.id"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-medium text-black/80 dark:text-white/80 hover:underline"
+                      >
+                        Kunjungi GBL ↗
+                      </a>
+                    )}
+                    {project.id === "silat" && (
+                      <a
+                        href="https://silatkumango.dedyirfan.id"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-medium text-black/80 dark:text-white/80 hover:underline"
+                      >
+                        Kunjungi Silat Kumango ↗
+                      </a>
+                    )}
                   </div>
                 </CardContent>
               </Card>
